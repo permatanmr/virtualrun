@@ -12,10 +12,14 @@
     Klik Tombol <strong>Connect</strong> untuk bisa melakukan koneksi dengan Strava terlebih dahulu untuk bisa melihat data aktivitas Anda.
   </p>
 
-  <a href="https://www.strava.com/oauth/authorize?client_id=75955&redirect_uri=http://6760-103-121-18-7.ngrok.io/authstrava&response_type=code&scope=activity:read_all" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Connect</a>
+  <a href="https://www.strava.com/oauth/authorize?client_id=75955&redirect_uri=http://ce17-103-121-18-7.ngrok.io/authstrava&response_type=code&scope=activity:read_all" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Connect</a>
 
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Log In</a>
 {% endif %}
+
+<br><br><br><br>
+<a href="{% url 'logout' %}">Log Out</a>
+
 {% endblock %}
