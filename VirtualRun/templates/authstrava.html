@@ -1,0 +1,17 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  <br><br><br><br>
+  <div>{{status}}</div>
+  <p>Strava Credential berhasil disimpan</p>
+  <a href="{% url 'dashboard' %}">Kembali ke Dashboard</a>
+
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a>
+{% endif %}
+{% endblock %}
